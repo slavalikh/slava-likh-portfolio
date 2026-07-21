@@ -37,30 +37,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "DM Sans", Helvetica Neue, Arial, sans-serif;
+  font-family: "Outfit", Helvetica Neue, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.28;
-}
-
-h1,
-h2,
-h3,
-strong,
-.rail-kicker,
-.bio p,
-.tile-title,
-.case-wordmark span,
-.case-intro p,
-.case-meta b,
-.result-item strong,
-.result-card strong,
-.method-map strong,
-.consulting-frame strong,
-.consulting-recommendation strong,
-.attribute-grid span,
-.visual-case-copy h3,
-.pager {
-  font-family: "Instrument Sans", Helvetica Neue, Arial, sans-serif;
 }
 
 a {
@@ -965,6 +944,176 @@ a:hover {
   letter-spacing: -0.04em;
 }
 
+/* Typography roles from the Figma type specimen (node 2:546). */
+.statement h2,
+.proof-item strong,
+.tile-title,
+.case-intro h1,
+.result-item strong,
+.result-cluster h3,
+.result-card strong,
+.method-map strong,
+.consulting-frame strong,
+.consulting-recommendation strong,
+.attribute-grid span,
+.visual-case-copy h3 {
+  font-family: "Boldonse", Helvetica Neue, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.16;
+}
+
+.statement .lead,
+.section-title,
+.proof-brand,
+.proof-item p,
+.proof-link,
+.tile-meta,
+.tile-copy,
+.case-intro p,
+.case-meta,
+.case-section h2,
+.case-section p,
+.case-section li,
+.result-item span,
+.result-card span,
+.result-card p,
+.method-map span,
+.consulting-frame span,
+.consulting-frame p,
+.consulting-recommendation span,
+.consulting-recommendation p,
+.attribute-grid p,
+.visual-case-copy span,
+.visual-case-copy p,
+.pager {
+  font-family: "Outfit", Helvetica Neue, Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.shell .rail-kicker,
+.bio p {
+  font-family: "Outfit", Helvetica Neue, Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.shell .rail-kicker {
+  font-weight: 700;
+}
+
+.bio p {
+  font-weight: 600;
+}
+
+.statement h2 {
+  font-size: clamp(52px, 5vw, 76px);
+}
+
+.proof-item strong {
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.24;
+}
+
+.tile-title {
+  font-size: clamp(19px, 1.4vw, 23px);
+  line-height: 1.26;
+}
+
+.case-intro h1 {
+  font-size: clamp(36px, 3.35vw, 58px);
+}
+
+.result-cluster h3 {
+  font-size: clamp(24px, 2vw, 36px);
+}
+
+.result-item strong,
+.result-card strong {
+  font-size: clamp(19px, 1.45vw, 27px);
+}
+
+.method-map strong {
+  font-size: clamp(16px, 1.05vw, 21px);
+}
+
+.consulting-frame strong {
+  font-size: clamp(18px, 1.25vw, 24px);
+}
+
+.consulting-recommendation strong {
+  font-size: clamp(22px, 1.8vw, 33px);
+}
+
+.attribute-grid span {
+  font-size: clamp(24px, 2vw, 36px);
+}
+
+.visual-case-copy h3 {
+  font-size: clamp(22px, 1.75vw, 32px);
+}
+
+.statement .lead {
+  max-width: 900px;
+  font-size: clamp(20px, 1.55vw, 22px);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.proof-item p,
+.tile-copy {
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.case-intro p,
+.case-intro p.case-intro-compact {
+  font-size: clamp(18px, 1.35vw, 22px);
+  line-height: 1.42;
+  font-weight: 400;
+}
+
+.case-section p,
+.case-section li {
+  font-size: clamp(17px, 1.05vw, 20px);
+  line-height: 1.42;
+  font-weight: 400;
+}
+
+.result-card p,
+.consulting-frame p,
+.consulting-recommendation p,
+.attribute-grid p,
+.visual-case-copy p {
+  font-size: clamp(16px, 0.95vw, 18px);
+  line-height: 1.38;
+  font-weight: 400;
+}
+
+.section-title,
+.case-section h2 {
+  font-weight: 500;
+}
+
+.mark span,
+.case-wordmark span {
+  font-family: "Konstant", Helvetica Neue, Arial, sans-serif;
+}
+
+.mark.windows span,
+.mark.azure span,
+.case-wordmark.mark.windows span,
+.case-wordmark.mark.azure span {
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+  .proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 980px) {
   .shell,
   .case-shell {
@@ -995,8 +1144,37 @@ a:hover {
     padding-bottom: 30px;
   }
 
+  .case-hero {
+    min-height: 0;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .case-wordmark {
+    min-height: 86px;
+    margin: 0;
+    padding: 14px 16px;
+    justify-content: flex-start;
+    border-bottom: 0;
+  }
+
+  .case-wordmark span {
+    font-size: clamp(34px, 9vw, 48px);
+    line-height: 1;
+    letter-spacing: -0.08em;
+    text-align: left;
+  }
+
+  .case-wordmark.mark.windows span,
+  .case-wordmark.mark.mcd span,
+  .case-wordmark.mark.ymaps span,
+  .case-wordmark.mark.azure span {
+    font-size: clamp(22px, 6vw, 32px);
+    line-height: 1.04;
+    letter-spacing: -0.06em;
+  }
+
   .case-meta,
-  .proof,
   .result-panel,
   .result-grid,
   .method-map,
@@ -1046,13 +1224,80 @@ a:hover {
 
   .case-meta,
   .proof,
-  .result-panel,
-  .result-grid,
   .method-map,
   .attribute-grid,
   .consulting-frame,
   .visual-case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proof {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+
+  .proof-item {
+    min-height: 0;
+    padding: 10px 12px 12px;
+  }
+
+  .proof-brand {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .proof-item strong {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .proof-item p {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .proof-link {
+    padding-top: 12px;
+  }
+
+  .result-panel,
+  .result-grid {
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+
+  .result-grid {
+    gap: 8px;
+  }
+
+  .result-item,
+  .result-card {
+    min-height: 0;
+    padding: 11px 12px 12px;
+  }
+
+  .result-item span,
+  .result-card span {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .result-item strong,
+  .result-card strong {
+    font-family: "Outfit", Helvetica Neue, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+
+  .result-card p {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.3;
   }
 
   .consulting-frame article,
@@ -1079,17 +1324,6 @@ a:hover {
     border-bottom: 0;
   }
 
-  .result-item,
-  .result-item:nth-child(2n),
-  .result-item:nth-last-child(-n + 2) {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .result-item:last-child {
-    border-bottom: 0;
-  }
-
   .tile {
     min-height: 300px;
   }
@@ -1101,6 +1335,30 @@ a:hover {
   .case-wordmark {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .result-panel,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-item,
+  .result-item:nth-child(2n),
+  .result-item:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .result-item:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 359px) {
+  .proof {
+    grid-template-columns: 1fr;
   }
 }
 
